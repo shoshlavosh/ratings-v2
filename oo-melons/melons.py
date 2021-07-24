@@ -96,14 +96,9 @@ class GovernmentMelonOrder(AbstractMelonOrder):
 
     def __init__(self, species, qty, passed_inspection):
         """Initialize melon order attributes."""
-
-        self.species = species
-        self.qty = qty
-        # self.shipped = shipped
-        super().__init__()
-        # self.order_type = order_type
-        self.tax = 0
-        self.passed_inspection = False
+        # simplified way to 
+        super().__init__(species, qty, shipped, order_type, tax=0)
+       
 
     def mark_inspection(self, passed):
         """Whether melon passed inspection"""
