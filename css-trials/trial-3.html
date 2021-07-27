@@ -3,7 +3,7 @@
 
   <head>
     <style>
-        div.blackbox {
+        /* div.blackbox {
         height: 100px;
         width: 500px;
         background-color: #000000;}
@@ -16,20 +16,29 @@
         div.yellowbox {
         height: 100px;
         width: 500px;
-        background-color: #d1b61c;}
+        background-color: #d1b61c;} */
+
+        div.box {
+        height: 100px;
+        width: 500px;
+        }
+
+        div#blackbox {background-color: #000000;}
+        div#redbox {background-color: #ff0000;}
+        div#yellowbox {background-color: #d1b61c;}
 
         body {margin:0;}
     </style>
   </head>
 
   <body>
-      <div class="blackbox">
+      <div id="blackbox" class="box blackbox">
       </div>
 
-      <div class="redbox">
+      <div id="redbox" class="box">
       </div>
       
-      <div class="yellowbox">
+      <div id="yellowbox" class="box">
       </div>
   </body>
 
