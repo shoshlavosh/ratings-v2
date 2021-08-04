@@ -10,7 +10,7 @@ const addItemToCart = (itemName) => {
   `);
 };
 
-//creates an identifier/variable resetCart
+//defines a function resetCart without parameters
 //Replaces dollar amount with zero and removes everything in 
 //cart-items object
 const resetCart = () => {
@@ -18,7 +18,7 @@ const resetCart = () => {
   $('#cart-items').empty();
 };
 
-//creates an identifier/variable incrementCartTotal
+//defines a function incrementCartTotal takes in parameter "price"
 //creates a new variable cartTotal and sets it to 
 //the object #cart-total
 //total = the Number version of the cart total
@@ -55,11 +55,16 @@ const setProgressAndStatus = (progressVal, statusMsg) => {
 
 //
 // Add your event handlers below.
+
+//selects an object with the class ".add-to-order"
 $('.add-to-order').on('click', () => {
   addItemToCart("Coffee");
   incrementCartTotal(1.50);
 });
-//
+//selects an object with id place-order (happens to be a button)
+//upon the click event, anonymous function calls the next two functions,
+//incrementCoffeeSold and resetCart
+//incrementCoffeeSold takes an argument object with id cart-items
 $('#place-order').on('click', () => {
   incrementCoffeeSold($('#cart-items').children().length);
   resetCart();
